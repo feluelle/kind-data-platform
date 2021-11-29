@@ -1,0 +1,5 @@
+.terraform
+.terraform.lock.hcl
+kind-data-platform-config
+terraform.tfstate
+terraform.tfstate.backup

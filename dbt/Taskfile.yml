@@ -1,0 +1,13 @@
+version: "3"
+
+includes:
+  base: ../Taskfile.yml
+
+vars:
+  SERVICE: dbt
+
+tasks:
+  default:
+    cmds:
+      - task: base:docker:build
+      - task: base:kind:load

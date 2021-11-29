@@ -1,0 +1,9 @@
+version: "3"
+
+includes:
+  base: ../Taskfile.yml
+
+tasks:
+  default:
+    cmds:
+      - task: base:terraform:apply

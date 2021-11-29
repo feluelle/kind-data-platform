@@ -1,0 +1,15 @@
+version: "3"
+
+includes:
+  base: ../Taskfile.yml
+
+vars:
+  SERVICE: airflow
+  SERVICE_REPOSITORY: apache-airflow/airflow
+
+tasks:
+  default:
+    cmds:
+      - task: base:docker:build
+      - task: base:kind:load
+      - task: base:helm:upgrade
