@@ -23,3 +23,6 @@ Install the following tools:
   - [ ] Implement some example extract and load to the data warehouse or postgres
 - [ ] Add documentation about `infra`
   - [ ] Add diagram (via [Excalidraw](https://excalidraw.com))
+- [ ] Add documentation about deployment
+- [ ] Scrape every infra service via _Prometheus_
+- [ ] Add contributing guidelines
