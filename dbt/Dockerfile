@@ -4,7 +4,6 @@ ENV DBT_PROFILES_DIR=/opt/dbt
 
 WORKDIR ${DBT_PROFILES_DIR}
 
-COPY project .
-COPY profiles.yml .
+COPY . .
 
 RUN dbt deps

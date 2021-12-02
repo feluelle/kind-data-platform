@@ -38,7 +38,7 @@ resource "kubernetes_config_map" "prometheus_dashboard" {
   }
 }
 
-resource "kubernetes_config_map" "prometheus_datasource" {
+resource "kubernetes_secret" "prometheus_datasource" {
   metadata {
     namespace = kubernetes_namespace.grafana.metadata.0.name
     name      = "prometheus-datasource"

@@ -13,4 +13,3 @@ resource "helm_release" "prometheus" {
   wait          = false
   wait_for_jobs = false
 }
-

@@ -12,4 +12,4 @@ tasks:
     cmds:
       - task: base:docker:build
       - task: base:kind:load
-      - task: base:helm:upgrade
+      - helm upgrade {{.SERVICE}} {{.SERVICE_REPOSITORY}} --namespace {{.SERVICE}} --set images.airflow.repository={{.IMAGE}} --set images.airflow.tag={{.TAG}}
