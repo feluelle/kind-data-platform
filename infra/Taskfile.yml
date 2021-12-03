@@ -14,7 +14,7 @@ tasks:
     cmds:
       - kind delete cluster --name {{.PROJECT}}
       - rm -f {{.PROJECT}}-config
-      - rm -rf *terraform* 
+      - rm -rf *terraform*
 
   visualize:
     cmds:

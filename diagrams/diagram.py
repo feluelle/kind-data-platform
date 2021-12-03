@@ -1,4 +1,4 @@
-from diagrams import Cluster, Diagram
+from diagrams import Diagram
 from diagrams.onprem.analytics import Dbt, Superset
 from diagrams.onprem.database import Postgresql
 from diagrams.onprem.monitoring import Grafana, Prometheus
