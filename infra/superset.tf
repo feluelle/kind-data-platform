@@ -11,4 +11,15 @@ resource "helm_release" "superset" {
   chart      = "superset"
   version    = "0.4.0"
   timeout    = 600
+
+  # FIXME: When importing a data source we need to re-save the connection via UI for example by changing the protocol of postgresql to postgres.
+  values = [
+    <<EOT
+extraConfigs:
+  import_datasources.yaml: |
+    databases:
+      - database_name: dbt
+        sqlalchemy_uri: postgresql://postgres:${data.kubernetes_secret.postgresql.data.postgresql-password}@host.docker.internal:5432/postgres
+EOT
+  ]
 }

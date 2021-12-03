@@ -4,18 +4,14 @@ vars:
   PROJECT: kind-data-platform
   IMAGE: "{{.PROJECT}}-{{.SERVICE}}"
   TAG: '{{default "latest" .TAG}}'
+  # NOTE: Change "_HOST_PLATFORM" to the platform architecture you are running docker on.
+  _HOST_PLATFORM: arm64
 
 tasks:
   docker:build:
     cmds:
-      - DOCKER_SCAN_SUGGEST=false docker build --tag {{.IMAGE}}:{{.TAG}} . --platform arm64
+      - DOCKER_SCAN_SUGGEST=false docker build --tag {{.IMAGE}}:{{.TAG}} . --platform {{._HOST_PLATFORM}}
 
   kind:load:
     cmds:
       - kind load docker-image {{.IMAGE}}:{{.TAG}} --name {{.PROJECT}}
-
-  terraform:apply:
-    cmds:
-      - terraform init
-      - terraform apply --target kind_cluster.default
-      - terraform apply

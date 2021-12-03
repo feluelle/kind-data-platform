@@ -4,6 +4,18 @@ includes:
   base: ../Taskfile.yml
 
 tasks:
-  default:
+  setup:
     cmds:
-      - task: base:terraform:apply
+      - terraform init
+      - terraform apply --target kind_cluster.default -auto-approve
+      - terraform apply -auto-approve
+
+  teardown:
+    cmds:
+      - kind delete cluster --name {{.PROJECT}}
+      - rm -f {{.PROJECT}}-config
+      - rm -rf *terraform* 
+
+  visualize:
+    cmds:
+      - terraform graph | dot -Tsvg > graph.svg

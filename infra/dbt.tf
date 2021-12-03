@@ -5,13 +5,11 @@ resource "kubernetes_namespace" "dbt" {
 }
 
 resource "helm_release" "postgresql" {
-  namespace     = kubernetes_namespace.dbt.metadata.0.name
-  name          = "postgresql"
-  repository    = "https://charts.bitnami.com/bitnami"
-  chart         = "postgresql"
-  version       = "10.13.8"
-  wait          = false
-  wait_for_jobs = false
+  namespace  = kubernetes_namespace.dbt.metadata.0.name
+  name       = "postgresql"
+  repository = "https://charts.bitnami.com/bitnami"
+  chart      = "postgresql"
+  version    = "10.13.8"
 }
 
 resource "kubernetes_cluster_role" "dbt" {
@@ -40,5 +38,12 @@ resource "kubernetes_cluster_role_binding" "dbt" {
     kind      = "ServiceAccount"
     namespace = kubernetes_namespace.airflow.metadata.0.name
     name      = "airflow-worker"
+  }
+}
+
+data "kubernetes_secret" "postgresql" {
+  metadata {
+    name      = "postgresql"
+    namespace = kubernetes_namespace.dbt.metadata.0.name
   }
 }
