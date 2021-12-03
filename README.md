@@ -2,6 +2,14 @@
 
 > A kind data platform on your local machine. 🤗
 
+The objective of this project is to be able to quickly setup a data platform on your local machine via kind. It should also help you get familiar with production-ready setup and tools such as terraform, kubernetes and helm.
+
+## Architecture
+
+The following diagram shows the services currently being used, all running in a kind cluster:
+
+![architecture](diagrams/kind-data-platform.png)
+
 ## Get started
 
 ### Prerequisites
@@ -9,6 +17,7 @@
 Install the following tools:
 - [docker](https://www.docker.com/)
 - [kind](https://kind.sigs.k8s.io/)
+- [helm](https://helm.sh/)
 - [task](https://taskfile.dev/)
 - [terraform](https://www.terraform.io/)
 
@@ -21,9 +30,3 @@ Install the following tools:
   - [ ] _Amazon ECR_ as Storage for docker images instead of loading directly to nodes i.e. `kind load image`
 - [ ] Add [Airbyte](https://airbyte.io) Helm chart for data loading
   - [ ] Implement some example extract and load to the data warehouse or postgres
-- [ ] Add documentation about `infra`
-  - [ ] Add diagram (via [Excalidraw](https://excalidraw.com))
-- [ ] Add documentation about deployment
-- [ ] Scrape every infra service via _Prometheus_
-- [ ] Add _Grafana_ dashboard for every infra service
-- [ ] Add contributing guidelines
