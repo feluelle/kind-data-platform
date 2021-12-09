@@ -1,5 +1,9 @@
 ci:
-  skip: [infra-visualize]
+  skip:
+    - infra-visualize
+    # FIXME: Terraform hooks are currently not working because of `terraform: command not found`
+    - terraform_fmt
+    - terraform_validate
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
