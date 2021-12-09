@@ -5,11 +5,12 @@ resource "kubernetes_namespace" "grafana" {
 }
 
 resource "helm_release" "grafana" {
-  namespace     = kubernetes_namespace.grafana.metadata.0.name
-  name          = "grafana"
-  repository    = "https://grafana.github.io/helm-charts"
-  chart         = "grafana"
-  version       = "6.17.8"
+  namespace  = kubernetes_namespace.grafana.metadata.0.name
+  name       = "grafana"
+  repository = "https://grafana.github.io/helm-charts"
+  chart      = "grafana"
+  version    = "6.17.8"
+  timeout    = 600
 
   set {
     name  = "sidecar.dashboards.enabled"

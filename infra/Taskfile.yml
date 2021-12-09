@@ -13,8 +13,8 @@ tasks:
   teardown:
     cmds:
       - kind delete cluster --name {{.PROJECT}}
-      - rm -f {{.PROJECT}}-config
-      - rm -rf *terraform*
+      - rm -rf .terraform
+      - rm -f {{.PROJECT}}-config .terraform.lock.hcl terraform.tfstate terraform.tfstate.backup
 
   visualize:
     cmds:

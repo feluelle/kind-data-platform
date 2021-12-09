@@ -43,7 +43,7 @@ resource "kubernetes_cluster_role_binding" "dbt" {
 
 data "kubernetes_secret" "postgresql" {
   metadata {
-    name      = "postgresql"
+    name      = helm_release.postgresql.name
     namespace = kubernetes_namespace.dbt.metadata.0.name
   }
 }

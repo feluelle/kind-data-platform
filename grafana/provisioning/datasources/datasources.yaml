@@ -3,5 +3,5 @@ datasources:
   - name: Prometheus
     type: prometheus
     access: proxy
-    url: http://host.docker.internal:9090
+    url: http://prometheus-server.prometheus.svc.cluster.local:80
     isDefault: true

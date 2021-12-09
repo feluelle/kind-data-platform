@@ -1,4 +1,5 @@
 .terraform
+.auto.tfvars
 .terraform.lock.hcl
 kind-data-platform-config
 terraform.tfstate

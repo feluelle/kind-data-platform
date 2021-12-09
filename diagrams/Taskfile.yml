@@ -1,6 +1,6 @@
 version: "3"
 
 tasks:
-  create:
+  default:
     cmds:
       - python3 diagram.py

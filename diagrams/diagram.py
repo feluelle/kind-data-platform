@@ -4,6 +4,7 @@ from diagrams.onprem.database import Postgresql
 from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.onprem.workflow import Airflow
 
+# TODO: Add Airbyte to diagram
 with Diagram(name="kind-data-platform", show=False):
     airflow = Airflow()
     dbt = Dbt()
