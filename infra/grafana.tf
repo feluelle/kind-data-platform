@@ -33,7 +33,7 @@ resource "kubernetes_config_map" "prometheus_dashboard" {
   }
 
   data = {
-    "prometheus_dashboard.json" = file("/Users/felixuellendall/Projects/kind-data-platform/grafana/provisioning/dashboards/prometheus-2-0-overview_rev2.json")
+    "prometheus_dashboard.json" = file("../grafana/provisioning/dashboards/prometheus-2-0-overview_rev2.json")
   }
 }
 
@@ -48,6 +48,6 @@ resource "kubernetes_secret" "prometheus_datasource" {
   }
 
   data = {
-    "datasource.yaml" = file("/Users/felixuellendall/Projects/kind-data-platform/grafana/provisioning/datasources/datasources.yaml")
+    "datasource.yaml" = file("../grafana/provisioning/datasources/datasources.yaml")
   }
 }
