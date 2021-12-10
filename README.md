@@ -27,6 +27,5 @@ Install the following tools:
   - [ ] _Amazon S3_ as data lake
   - [ ] _Amazon Redshift_ as data warehouse instead of postgres
   - [ ] _AWS Secrets Manager_ as storage for Airflow Connections & Airflow Variables
-  - [ ] _Amazon ECR_ as Storage for docker images instead of loading directly to nodes i.e. `kind load image`
 - [x] Add [Airbyte](https://airbyte.io) Helm chart for data loading
-  - [x] Implement some example extract and load to the data warehouse or postgres
+  - [x] Implement an example Airflow DAG
