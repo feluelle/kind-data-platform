@@ -23,8 +23,8 @@ Install the following tools:
 
 ## Roadmap
 
-- [ ] Use [localstack](https://docs.localstack.cloud/integrations/terraform/)
-  - [ ] _Amazon S3_ as data lake
+- [x] Use [localstack](https://docs.localstack.cloud/integrations/terraform/)
+  - [x] _Amazon S3_ as data lake
   - [ ] _Amazon Redshift_ as data warehouse instead of postgres
   - [ ] _AWS Secrets Manager_ as storage for Airflow Connections & Airflow Variables
 - [x] Add [Airbyte](https://airbyte.io) Helm chart for data loading
