@@ -34,6 +34,10 @@ resource "helm_release" "airflow" {
 }
 
 
+resource "random_password" "airflow_webserver_secret_key" {
+  length = 16
+}
+
 resource "kubernetes_secret" "airflow_webserver" {
   metadata {
     namespace = kubernetes_namespace.airflow.metadata.0.name
@@ -41,6 +45,6 @@ resource "kubernetes_secret" "airflow_webserver" {
   }
 
   data = {
-    "webserver-secret-key" = var.airflow_webserver_secret_key
+    "webserver-secret-key" = random_password.airflow_webserver_secret_key.result
   }
 }

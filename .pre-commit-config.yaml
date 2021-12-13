@@ -1,7 +1,3 @@
-ci:
-  skip:
-    - infra-visualize
-
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
@@ -10,11 +6,11 @@ repos:
       - id: check-json
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.17
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.60.0
     hooks:
-      - id: terraform-fmt
-      - id: terraform-validate
+      - id: terraform_fmt
+      - id: terraform_validate
   - repo: https://github.com/psf/black
     rev: 21.12b0
     hooks:
