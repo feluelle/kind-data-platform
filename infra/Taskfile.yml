@@ -4,13 +4,33 @@ includes:
   base: ../Taskfile.yml
 
 tasks:
-  setup:
+  setup:cluster:
     cmds:
       - terraform init
       - terraform apply --target kind_cluster.default -auto-approve
+      - task: base:docker:build
+        vars:
+          SERVICE: airflow
+          DOCKERFILE: ../airflow
+      - task: base:kind:load
+        vars:
+          SERVICE: airflow
       - terraform apply -auto-approve
 
-  teardown:
+  expose:localstack:
+    cmds:
+      - kubectl port-forward svc/localstack 4566:4566 --namespace localstack
+
+  setup:localstack-services:
+    cmds:
+      - terraform -chdir=localstack-resources init
+      - terraform -chdir=localstack-resources apply -auto-approve
+
+  teardown:localstack-services:
+    cmds:
+      - terraform -chdir=localstack-resources destroy -auto-approve
+
+  teardown:cluster:
     cmds:
       - kind delete cluster --name {{.PROJECT}}
       - rm -f {{.PROJECT}}-config terraform.tfstate terraform.tfstate.backup

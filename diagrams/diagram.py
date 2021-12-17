@@ -1,4 +1,5 @@
 from diagrams import Diagram
+from diagrams.aws.security import SecretsManager
 from diagrams.aws.storage import S3
 from diagrams.custom import Custom
 from diagrams.onprem.analytics import Dbt, Superset
@@ -15,9 +16,11 @@ with Diagram(name="kind-data-platform", show=False):
     prometheus = Prometheus()
     superset = Superset()
     s3 = S3()
+    secretsmanager = SecretsManager()
 
     airflow >> airbyte >> [s3, postgresql]
     airflow >> dbt >> postgresql
+    airflow >> secretsmanager
     grafana >> prometheus
     superset >> postgresql
-    prometheus >> [airflow, postgresql, superset]
+    prometheus >> airflow

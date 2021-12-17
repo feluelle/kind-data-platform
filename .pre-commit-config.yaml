@@ -32,3 +32,8 @@ repos:
         language: system
         entry: task -t infra/Taskfile.yml visualize
         pass_filenames: false
+      - id: diagrams-visualize
+        name: Visualize Diagrams
+        language: system
+        entry: task -t diagrams/Taskfile.yml
+        pass_filenames: false

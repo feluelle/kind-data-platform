@@ -18,21 +18,9 @@ image:
 
 extraEnvVars:
   - name: SERVICES
-    value: "s3"
+    value: "s3,secretsmanager"
   - name: EAGER_SERVICE_LOADING
     value: "1"
 EOT
   ]
-}
-
-resource "aws_s3_bucket" "s3" {
-  bucket_prefix = "data-lake-"
-
-  depends_on = [
-    helm_release.localstack
-  ]
-}
-
-output "data-lake-s3-bucket" {
-  value = aws_s3_bucket.s3.id
 }
