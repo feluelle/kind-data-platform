@@ -38,17 +38,6 @@ kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-passwor
 
 I am using [localstack](https://localstack.cloud) to create a local stack of AWS resoures to store **secrets and data**.
 
-### Notes
-
-To create the localstack resources you need to expose the localstack service first by running the following:
-```bash
-task -t infra/Taskfile.yml expose:localstack
-```
-and then create the resources by running the following:
-```bash
-task -t infra/Taskfile.yml setup:localstack-resources
-```
-
 ## prometheus
 
 I am using [Prometheus](https://prometheus.io) to scrape **metrics** of all services.
