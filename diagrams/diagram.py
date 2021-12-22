@@ -1,3 +1,5 @@
+from urllib.request import urlretrieve
+
 from diagrams import Diagram
 from diagrams.aws.security import SecretsManager
 from diagrams.aws.storage import S3
@@ -7,8 +9,17 @@ from diagrams.onprem.database import Postgresql
 from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.onprem.workflow import Airflow
 
-with Diagram(name="kind-data-platform", show=False):
-    airbyte = Custom("Airbyte", "./custom/airbyte/airbyte.png")
+# FIXME: Use node from diagrams when available. See https://github.com/mingrammer/diagrams/issues/457 for more information.
+airbyte_url = "https://assets.website-files.com/605e01bc25f7e19a82e74788/60895f8dfc189968c33b89d2_airbyte_rounded-rectangle_icon-p1myrdbsr61z7375uuocdxnlmab85b8vry3h73pfk0.png"
+airbyte_icon = "./custom/airbyte.png"
+urlretrieve(airbyte_url, airbyte_icon)
+
+with Diagram(
+    name="kind-data-platform",
+    show=False,
+    graph_attr={"bgcolor": "transparent", "pad": "0.5"},
+):
+    airbyte = Custom(label="", icon_path=airbyte_icon)
     airflow = Airflow()
     dbt = Dbt()
     postgresql = Postgresql()
