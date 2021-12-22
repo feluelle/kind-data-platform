@@ -48,4 +48,4 @@ _See [infra](infra/README.md) for more information about the projects infrastruc
 
 ## 📜 Roadmap
 
-You can find what is being worked and what is to do in the [project](https://github.com/feluelle/kind-data-platform/projects/1).
+You can find what is being worked on and what is to do in the [project](https://github.com/feluelle/kind-data-platform/projects/1).
