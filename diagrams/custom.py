@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from os.path import splitext
+from tempfile import gettempdir
 from urllib.parse import urlparse
 from urllib.request import urlretrieve
 
@@ -34,7 +35,8 @@ class HelperCustom:
         :returns: the local path of the icon.
         """
         file_extension = self.file_extension or self._get_file_extension()
-        return f"./custom/{self.name}{file_extension}"
+        directory = gettempdir()
+        return f"{directory}/{self.name}{file_extension}"
 
     def _get_file_extension(self) -> str:
         path = urlparse(self.url).path
