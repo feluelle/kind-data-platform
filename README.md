@@ -34,7 +34,7 @@ If you give the docker daemon less resources, make sure to adjust the `timeout` 
 
 First create the main infrastructure by running the following command:
 ```bash
-task -t infra/Taskfile.yml setup
+task -t infra/Taskfile.yml setup:cluster
 ```
 Then create the localstack resources, for this you first need to expose the localstack service first by running the following:
 ```bash
