@@ -37,4 +37,4 @@ tasks:
 
   visualize:
     cmds:
-      - terraform graph | docker run -i robhaswell/dot-docker -Tsvg > graph.svg
+      - terraform graph | docker run --rm -i nshine/dot dot -Tsvg > graph.svg
