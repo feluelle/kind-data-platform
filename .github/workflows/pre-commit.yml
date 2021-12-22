@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.11
       - working-directory: ./infra
         run: terraform init
       - working-directory: ./infra/localstack-resources
