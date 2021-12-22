@@ -14,7 +14,7 @@ resource "helm_release" "localstack" {
   values = [
     <<EOT
 image:
-  tag: 0.13.1
+  tag: 0.13.2
 
 extraEnvVars:
   - name: SERVICES
