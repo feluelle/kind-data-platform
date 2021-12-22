@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/airflow"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    directory: "/dbt"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "terraform"
+    directory: "/infra"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "terraform"
+    directory: "/infra/localstack-resources"
+    schedule:
+      interval: "daily"
