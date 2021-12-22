@@ -86,9 +86,4 @@ task -t infra/Taskfile.yml setup:localstack-resources
 
 ## Roadmap
 
-- [x] Use [localstack](https://docs.localstack.cloud/integrations/terraform/)
-  - [x] _Amazon S3_ as data lake
-  - [ ] _Amazon Redshift_ as data warehouse instead of postgres
-  - [x] _AWS Secrets Manager_ as storage for Airflow Connections & Airflow Variables
-- [x] Add [Airbyte](https://airbyte.io) Helm chart for data loading
-  - [x] Implement an example Airflow DAG
+You can find what is being worked and what is to do in the [project](https://github.com/feluelle/kind-data-platform/projects/1).
