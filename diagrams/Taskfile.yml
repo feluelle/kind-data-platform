@@ -3,4 +3,4 @@ version: "3"
 tasks:
   default:
     cmds:
-      - python3 diagram.py
+      - cat diagram.py | docker run -i --rm -v $(pwd):/out gtramontina/diagrams:0.20.0

@@ -15,9 +15,10 @@ The following diagram shows the services currently being used, all running in a 
 ### Prerequisites
 
 Install the following tools:
+- [awscli](https://aws.amazon.com/cli/)
 - [docker](https://www.docker.com/)
 - [kind](https://kind.sigs.k8s.io/)
-- [helm](https://helm.sh/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [task](https://taskfile.dev/)
 - [terraform](https://www.terraform.io/)
 
