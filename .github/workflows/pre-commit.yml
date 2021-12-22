@@ -12,6 +12,9 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: hashicorp/setup-terraform@v1
-      - run: terraform init
+      - working-directory: ./infra
+        run: terraform init
+      - working-directory: ./infra/localstack-resources
+        run: terraform init
       - uses: arduino/setup-task@v1
       - uses: pre-commit/action@v2.0.3
