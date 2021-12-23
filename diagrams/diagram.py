@@ -8,9 +8,16 @@ from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.onprem.workflow import Airflow
 
 with Diagram(
-    name="kind-data-platform",
+    filename="kind-data-platform",
     show=False,
-    graph_attr={"bgcolor": "transparent", "pad": "0.5"},
+    graph_attr={
+        "bgcolor": "#272935",  # snazzy theme
+        "dpi": "48.0",
+        "pad": "0.5",
+    },
+    edge_attr={
+        "color": "#eff0ea",  # snazzy theme
+    },
 ):
     airbyte = Airbyte()
     airflow = Airflow()
