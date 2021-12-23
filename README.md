@@ -1,5 +1,10 @@
 # kind-data-platform
 
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/feluelle/kind-data-platform/main.svg)](https://results.pre-commit.ci/latest/github/feluelle/kind-data-platform/main)
+![terraform workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/terraform.yml/badge.svg)
+[![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 > A kind data platform on your local machine. 🤗
 
 The objective of this project is to be able to quickly setup a data platform on your local machine via kind. It should also help you get familiar with production-ready setup and tools such as terraform, kubernetes and helm.
@@ -50,3 +55,7 @@ _See [infra](infra/README.md) for more information about the projects infrastruc
 ## 📜 Roadmap
 
 You can find what is being worked on and what is to do in the [project](https://github.com/feluelle/kind-data-platform/projects/1).
+
+## ❤️ Contributing
+
+You're welcome to join this project and I would be more than happy to have you on board. Feel free to raise any issue you might encounter or open a PR to address it. Check out [CI](CI.md) to learn more about how we develop and test code.
