@@ -2,6 +2,7 @@
 
 [![Github commit activity](https://img.shields.io/github/commit-activity/w/feluelle/kind-data-platform)](https://github.com/feluelle/kind-data-platform/pulse)
 [![Pre-commit.ci status](https://results.pre-commit.ci/badge/github/feluelle/kind-data-platform/main.svg)](https://results.pre-commit.ci/latest/github/feluelle/kind-data-platform/main)
+![CodeQL workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/codeql-analysis.yml/badge.svg)
 ![Docker workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/docker.yml/badge.svg)
 ![Terraform workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/terraform.yml/badge.svg)
 [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
