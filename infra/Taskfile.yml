@@ -4,7 +4,7 @@ includes:
   base: ../Taskfile.yml
 
 tasks:
-  setup:cluster:
+  setup:
     cmds:
       - terraform init
       - terraform apply --target kind_cluster.default -auto-approve
@@ -23,14 +23,14 @@ tasks:
 
   setup:localstack-services:
     cmds:
-      - terraform -chdir=localstack-resources init
-      - terraform -chdir=localstack-resources apply -auto-approve
+      - terraform -chdir=localstack-services init
+      - terraform -chdir=localstack-services apply -auto-approve
 
   teardown:localstack-services:
     cmds:
-      - terraform -chdir=localstack-resources destroy -auto-approve
+      - terraform -chdir=localstack-services destroy -auto-approve
 
-  teardown:cluster:
+  teardown:
     cmds:
       - kind delete cluster --name {{.PROJECT}}
       - rm -f {{.PROJECT}}-config terraform.tfstate terraform.tfstate.backup
@@ -38,3 +38,7 @@ tasks:
   visualize:
     cmds:
       - terraform graph | docker run --rm -i nshine/dot dot -Tsvg > graph.svg
+
+  visualize:localstack-services:
+    cmds:
+      - terraform -chdir=localstack-services graph | docker run --rm -i nshine/dot dot -Tsvg > localstack-services/graph.svg

@@ -6,41 +6,99 @@ ci:
   - diagrams-visualize
 
 repos:
+  - repo: meta
+    hooks:
+      - id: check-hooks-apply
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
-      - id: check-yaml
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-docstring-first
       - id: check-json
+      - id: check-yaml
+      - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.17
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: v1.5.7
     hooks:
-      - id: terraform-fmt
-      - id: terraform-validate
+      - id: autopep8
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.930
+    hooks:
+      - id: mypy
+  - repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+      - id: python-check-blanket-noqa
+      - id: python-check-blanket-type-ignore
+      - id: python-check-mock-methods
+      - id: python-no-eval
+      - id: python-no-log-warn
+      - id: python-use-type-annotations
+  - repo: https://github.com/asottile/add-trailing-comma
+    rev: v2.2.1
+    hooks:
+      - id: add-trailing-comma
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.29.1
+    hooks:
+      - id: pyupgrade
+  - repo: https://github.com/asottile/yesqa
+    rev: v1.3.0
+    hooks:
+      - id: yesqa
+  - repo: https://github.com/asottile/dead
+    rev: v1.4.0
+    hooks:
+      - id: dead
   - repo: https://github.com/psf/black
     rev: 21.12b0
     hooks:
       - id: black
-  - repo: https://github.com/pycqa/isort
-    rev: 5.10.1
-    hooks:
-      - id: isort
-        args: ["--profile", "black"]
   - repo: https://gitlab.com/PyCQA/flake8
     rev: 4.0.1
     hooks:
       - id: flake8
         args: ["--max-line-length", "88", "--extend-ignore", "E203,E501"]
+  - repo: https://github.com/PyCQA/bandit
+    rev: 1.7.1
+    hooks:
+      - id: bandit
+  - repo: https://github.com/PyCQA/pydocstyle
+    rev: 6.1.1
+    hooks:
+      - id: pydocstyle
+        args: ["--convention", "pep257", "--add-ignore", "D100,D107"]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+  - repo: https://github.com/gruntwork-io/pre-commit
+    rev: v0.1.17
+    hooks:
+      - id: terraform-fmt
+      - id: terraform-validate
+  - repo: https://github.com/hadolint/hadolint
+    rev: v2.8.0
+    hooks:
+      - id: hadolint-docker
   - repo: local
     hooks:
       - id: infra-visualize
-        name: Visualize Infra
+        name: Visualize infra
         language: system
         entry: task -t infra/Taskfile.yml visualize
         pass_filenames: false
+      - id: infra-visualize
+        name: Visualize localstack-services
+        language: system
+        entry: task -t infra/Taskfile.yml visualize:localstack-services
+        pass_filenames: false
       - id: diagrams-visualize
-        name: Visualize Diagrams
+        name: Visualize diagrams
         language: system
         entry: task -t diagrams/Taskfile.yml
         pass_filenames: false

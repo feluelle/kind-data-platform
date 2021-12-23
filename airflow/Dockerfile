@@ -1,5 +1,6 @@
 FROM apache/airflow:2.2.1
 
-RUN pip install apache-airflow-providers-airbyte
+RUN pip install --no-cache-dir apache-airflow-providers-airbyte==2.1.1
 
+WORKDIR ${AIRFLOW_HOME}
 COPY . .

@@ -7,8 +7,9 @@ from airflow.utils.dates import days_ago
 from kubernetes.client import models as k8s
 
 
-@dag(start_date=days_ago(1), schedule_interval=None)
+@dag(start_date=days_ago(1), schedule_interval=None, tags=["example"])
 def dbt():
+    """Define an example DBT DAG which calls DBT commands inside a Kubernetes Pod."""
     KubernetesPodOperator(
         task_id="dbt_run",
         task_concurrency=1,
@@ -24,7 +25,12 @@ def dbt():
             k8s.V1EnvVar(name="DBT_POSTGRES_PORT", value="5432"),
         ],
         secrets=[
-            Secret("env", "DBT_POSTGRES_PASSWORD", "postgresql", "postgresql-password"),
+            Secret(
+                "env",
+                "DBT_POSTGRES_PASSWORD",
+                "postgresql",
+                "postgresql-password",
+            ),
         ],
         is_delete_operator_pod=True,
         in_cluster=True,

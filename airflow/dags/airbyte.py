@@ -4,8 +4,9 @@ from airflow.providers.airbyte.sensors.airbyte import AirbyteJobSensor
 from airflow.utils.dates import days_ago
 
 
-@dag(start_date=days_ago(1), schedule_interval=None)
+@dag(start_date=days_ago(1), schedule_interval=None, tags=["example"])
 def airbyte():
+    """Define an example Airbyte DAG which triggers an Airbyte sync operation."""
     async_source_destination = AirbyteTriggerSyncOperator(
         task_id="airbyte_trigger_async",
         connection_id="{{ var.value.AIRBYTE_CONNECTION_ID }}",

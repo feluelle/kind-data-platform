@@ -10,7 +10,7 @@ from diagrams.custom import Custom
 @dataclass
 class HelperCustom:
     """
-    Helps downloading the icon for the a custom node.
+    Help downloading the icon for the a custom node.
 
     :param name: The name of the custom node.
     :param url: The url to the icon to download.
@@ -22,15 +22,13 @@ class HelperCustom:
     file_extension: str = ""
 
     def download(self) -> None:
-        """
-        Downloads the icon from the url.
-        """
+        """Download the icon from the url."""
         icon_path = self.get_icon_path()
-        urlretrieve(self.url, icon_path)
+        urlretrieve(self.url, icon_path)  # nosec B10:urllib_urlopen
 
     def get_icon_path(self) -> str:
         """
-        Gets the local path to the icon.
+        Get the local path to the icon.
 
         :returns: the local path of the icon.
         """
@@ -59,9 +57,7 @@ class CustomSlim(Custom):
 
 
 class Airbyte(CustomSlim):
-    """
-    FIXME: Use node from diagrams when available. See https://github.com/mingrammer/diagrams/issues/457 for more information.
-    """
+    """FIXME: Use node from diagrams when available. See https://github.com/mingrammer/diagrams/issues/457 for more information."""
 
     def __init__(self):
         super().__init__(
@@ -71,9 +67,7 @@ class Airbyte(CustomSlim):
 
 
 class Dbt(CustomSlim):
-    """
-    Using a proper dbt icon.
-    """
+    """Using a proper dbt icon."""
 
     def __init__(self):
         super().__init__(
@@ -84,9 +78,7 @@ class Dbt(CustomSlim):
 
 
 class Superset(CustomSlim):
-    """
-    Using a proper superset icon.
-    """
+    """Using a proper superset icon."""
 
     def __init__(self):
         super().__init__(
