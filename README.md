@@ -1,9 +1,9 @@
 # kind-data-platform
 
-[![github commit activity](https://img.shields.io/github/commit-activity/w/feluelle/kind-data-platform)](https://github.com/feluelle/kind-data-platform/pulse)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/feluelle/kind-data-platform/main.svg)](https://results.pre-commit.ci/latest/github/feluelle/kind-data-platform/main)
-![docker workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/docker.yml/badge.svg)
-![terraform workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/terraform.yml/badge.svg)
+[![Github commit activity](https://img.shields.io/github/commit-activity/w/feluelle/kind-data-platform)](https://github.com/feluelle/kind-data-platform/pulse)
+[![Pre-commit.ci status](https://results.pre-commit.ci/badge/github/feluelle/kind-data-platform/main.svg)](https://results.pre-commit.ci/latest/github/feluelle/kind-data-platform/main)
+![Docker workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/docker.yml/badge.svg)
+![Terraform workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/terraform.yml/badge.svg)
 [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
@@ -61,3 +61,15 @@ You can find what is being worked on and what is to do in the [project](https://
 ## ❤️ Contributing
 
 You're welcome to join this project and I would be more than happy to have you on board. Feel free to raise any issue you might encounter or open a PR to address it. Check out [CI](CI.md) to learn more about how we develop and test code.
+
+If you want to jump right into it, here are..
+
+[![Good first issues open](https://img.shields.io/github/issues/feluelle/kind-data-platform/good%20first%20issue.svg?label=good%20first%20issues)](https://github.com/feluelle/kind-data-platform/issues?q=is%3Aopen+is%3Aissue+label%3A"good+first+issue")
+
+## 💬 Feedback
+
+In case you like the project, just follow me..
+
+[![Github followers](https://img.shields.io/github/followers/feluelle?label=Follow&style=social)](https://github.com/feluelle)
+
+In case you don't like the project or have any feedback for me drop me a mail at feluelle@pm.me.
