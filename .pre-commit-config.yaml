@@ -2,7 +2,9 @@ ci:
   skip:
   - terraform-fmt
   - terraform-validate
+  - hadolint-docker
   - infra-visualize
+  - localstack-services-visualize
   - diagrams-visualize
 
 repos:
@@ -92,7 +94,7 @@ repos:
         language: system
         entry: task -t infra/Taskfile.yml visualize
         pass_filenames: false
-      - id: infra-visualize
+      - id: localstack-services-visualize
         name: Visualize localstack-services
         language: system
         entry: task -t infra/Taskfile.yml visualize:localstack-services
