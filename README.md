@@ -1,6 +1,8 @@
 # kind-data-platform
 
+[![github commit activity](https://img.shields.io/github/commit-activity/w/feluelle/kind-data-platform)](https://github.com/feluelle/kind-data-platform/pulse)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/feluelle/kind-data-platform/main.svg)](https://results.pre-commit.ci/latest/github/feluelle/kind-data-platform/main)
+![docker workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/docker.yml/badge.svg)
 ![terraform workflow](https://github.com/feluelle/kind-data-platform/actions/workflows/terraform.yml/badge.svg)
 [![License](https://img.shields.io/:license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.txt)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
