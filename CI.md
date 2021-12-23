@@ -6,6 +6,10 @@ The Continuos Integration document describes everything you need to know when de
 
 This project is using [GitHub Actions](https://github.com/features/actions) workflows in CI.
 
+### docker
+
+The [docker workflow](.github/workflows/docker.yml) validates the docker files across the repository.
+
 ### terraform
 
 The [terraform workflow](.github/workflows/terraform.yml) validates the infrastructure code located in the [infra](infra) directory.
