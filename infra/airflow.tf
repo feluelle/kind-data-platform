@@ -23,6 +23,8 @@ images:
     pullPolicy: Never
 
 config:
+  api:
+    auth_backend: airflow.api.auth.backend.basic_auth
   secrets:
     backend: airflow.providers.amazon.aws.secrets.secrets_manager.SecretsManagerBackend
     backend_kwargs: '{"connections_prefix": "airflow/connections", "variables_prefix": "airflow/variables", "endpoint_url": "http://host.docker.internal:4566"}'
