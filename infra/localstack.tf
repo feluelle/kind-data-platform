@@ -5,6 +5,7 @@ resource "kubernetes_namespace" "localstack" {
 }
 
 resource "helm_release" "localstack" {
+  # GitHub: https://github.com/localstack/helm-charts
   namespace  = kubernetes_namespace.localstack.metadata.0.name
   name       = "localstack"
   repository = "https://localstack.github.io/helm-charts"

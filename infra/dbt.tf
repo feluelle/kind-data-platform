@@ -5,11 +5,12 @@ resource "kubernetes_namespace" "dbt" {
 }
 
 resource "helm_release" "postgresql" {
+  # ArtifactHUB: https://artifacthub.io/packages/helm/bitnami/postgresql
   namespace  = kubernetes_namespace.dbt.metadata.0.name
   name       = "postgresql"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "postgresql"
-  version    = "10.13.8"
+  version    = "10.16.2"
 }
 
 resource "kubernetes_cluster_role" "dbt" {

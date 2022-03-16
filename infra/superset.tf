@@ -5,6 +5,7 @@ resource "kubernetes_namespace" "superset" {
 }
 
 resource "helm_release" "superset" {
+  # GitHub: https://github.com/apache/superset
   namespace  = kubernetes_namespace.superset.metadata.0.name
   name       = "superset"
   repository = "https://apache.github.io/superset"

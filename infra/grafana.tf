@@ -5,11 +5,12 @@ resource "kubernetes_namespace" "grafana" {
 }
 
 resource "helm_release" "grafana" {
+  # ArtifactHUB: https://artifacthub.io/packages/helm/grafana/grafana
   namespace  = kubernetes_namespace.grafana.metadata.0.name
   name       = "grafana"
   repository = "https://grafana.github.io/helm-charts"
   chart      = "grafana"
-  version    = "6.17.8"
+  version    = "6.24.1"
   timeout    = 600
 
   set {
