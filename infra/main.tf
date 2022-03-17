@@ -1,6 +1,6 @@
 resource "kind_cluster" "default" {
   name       = "kind-data-platform"
-  node_image = "kindest/node:v1.23.0"
+  node_image = "kindest/node:v1.23.4"
 }
 
 resource "helm_release" "metrics-server" {
