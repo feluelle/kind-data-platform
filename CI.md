@@ -19,7 +19,9 @@ The [terraform workflow](.github/workflows/terraform.yml) validates the infrastr
 This project is using [pre-commit ci](https://pre-commit.ci) to run the pre-commit hooks defined in [.pre-commit-config.yaml](.pre-commit-config.yaml) in CI.
 
 Optionall you can [install pre-commit](https://pre-commit.com/#install) locally and run:
+
 ```bash
 pre-commit install
 ```
+
 _This adds the pre-commit hooks to `.git/hooks` and runs every time you are about to commit changes._

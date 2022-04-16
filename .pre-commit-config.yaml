@@ -93,14 +93,17 @@ repos:
         name: Visualize infra
         language: system
         entry: task -t infra/Taskfile.yml visualize
+        files: ^infra/.*.tf$
         pass_filenames: false
       - id: localstack-services-visualize
         name: Visualize localstack-services
         language: system
         entry: task -t infra/Taskfile.yml visualize:localstack-services
+        files: ^infra/localstack-services.*.tf$
         pass_filenames: false
       - id: diagrams-visualize
         name: Visualize diagrams
         language: system
         entry: task -t diagrams/Taskfile.yml
         pass_filenames: false
+        files: ^diagrams/.*.py$

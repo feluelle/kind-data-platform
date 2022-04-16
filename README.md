@@ -22,6 +22,7 @@ The following diagram shows the services currently being used, all running in a 
 ### Prerequisites
 
 Install the following tools:
+
 - [awscli](https://aws.amazon.com/cli/)
 - [docker](https://www.docker.com/)
 - [kind](https://kind.sigs.k8s.io/)
@@ -30,28 +31,36 @@ Install the following tools:
 - [terraform](https://www.terraform.io/)
 
 My docker setup i.e. `docker info`
-```
+
+```text
 ...
 CPUs: 10
 Total Memory: 15.6GiB
 ...
 ```
+
 If you give the docker daemon less resources, make sure to adjust the `timeout` parameter in the helm releases as creating them can take up more time.
 
 ### Setup
 
 First create the main infrastructure by running the following command:
+
 ```bash
 task -t infra/Taskfile.yml setup
 ```
+
 Then create the localstack services, for this you first need to expose localstack first by running the following:
+
 ```bash
 task -t infra/Taskfile.yml expose:localstack
 ```
+
 and then create the services by running the following:
+
 ```bash
 task -t infra/Taskfile.yml setup:localstack-services
 ```
+
 _See [infra](infra/README.md) for more information about the projects infrastructure._
 
 ## 📜 Roadmap
