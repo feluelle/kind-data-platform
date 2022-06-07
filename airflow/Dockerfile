@@ -1,6 +1,6 @@
-FROM apache/airflow:2.3.2
+FROM apache/airflow:2.3.2-python3.10
 
-RUN pip install --no-cache-dir apache-airflow-providers-airbyte==2.1.1
+RUN pip install --no-cache-dir apache-airflow-providers-airbyte==2.1.4
 
 WORKDIR ${AIRFLOW_HOME}
 COPY . .

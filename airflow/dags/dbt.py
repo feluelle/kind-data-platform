@@ -13,7 +13,7 @@ def dbt():
     KubernetesPodOperator(
         task_id="dbt_run",
         task_concurrency=1,
-        cmds=["bash", "-c", "dbt run"],
+        cmds=["run"],
         name="dbt_run",
         namespace="dbt",
         image="kind-data-platform-dbt:latest",
