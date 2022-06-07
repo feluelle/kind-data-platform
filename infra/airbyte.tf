@@ -14,4 +14,9 @@ resource "helm_release" "airbyte" {
   version    = "0.3.0"
   timeout    = 600
   wait       = false
+
+  set {
+    name  = "version"
+    value = "0.39.13-alpha"
+  }
 }
