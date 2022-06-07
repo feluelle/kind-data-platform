@@ -9,7 +9,7 @@ resource "kubernetes_namespace" "airbyte" {
 resource "helm_release" "airbyte" {
   namespace  = kubernetes_namespace.airbyte.metadata.0.name
   name       = "airbyte"
-  repository = "https://raw.githubusercontent.com/feluelle/airbyte/feature/add-chart-repo/charts"
+  repository = "https://contra.github.io/helm-charts/charts/airbyte/"
   chart      = "airbyte"
   version    = "0.3.0"
   timeout    = 600
