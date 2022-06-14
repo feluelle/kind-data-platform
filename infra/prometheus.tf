@@ -10,6 +10,5 @@ resource "helm_release" "prometheus" {
   name       = "prometheus"
   repository = "https://prometheus-community.github.io/helm-charts"
   chart      = "prometheus"
-  version    = "14.12.0"
-  timeout    = 600
+  version    = "15.10.1"
 }

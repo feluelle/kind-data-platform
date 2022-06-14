@@ -10,7 +10,7 @@ resource "helm_release" "postgresql" {
   name       = "postgresql"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "postgresql"
-  version    = "10.16.2"
+  version    = "11.6.6"
 }
 
 resource "kubernetes_cluster_role" "dbt" {

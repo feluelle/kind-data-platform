@@ -12,8 +12,10 @@ resource "helm_release" "airbyte" {
   repository = "https://contra.github.io/helm-charts/charts/airbyte/"
   chart      = "airbyte"
   version    = "0.3.0"
-  timeout    = 600
-  wait       = false
+  # The helm chart takes a lot of time to initialize, therefore we need to increase the timeout.
+  timeout = 600
+  # We can not wait due to an issue with the helm chart
+  wait = false
 
   set {
     name  = "version"

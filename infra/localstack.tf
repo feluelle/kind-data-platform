@@ -10,12 +10,12 @@ resource "helm_release" "localstack" {
   name       = "localstack"
   repository = "https://localstack.github.io/helm-charts"
   chart      = "localstack"
-  version    = "0.3.7"
+  version    = "0.4.0"
 
   values = [
     <<EOT
 image:
-  tag: 0.13.2
+  tag: 0.14.3
 
 extraEnvVars:
   - name: SERVICES
