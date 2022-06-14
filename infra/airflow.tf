@@ -19,16 +19,16 @@ resource "helm_release" "airflow" {
     <<EOT
 images:
   airflow:
-    repository: kind-data-platform-airflow
+    repository: ${local.docker_registry}:5000/kind-data-platform-airflow
     tag: latest
-    pullPolicy: Never
+    pullPolicy: Always
 
 config:
   api:
     auth_backend: airflow.api.auth.backend.basic_auth
   secrets:
     backend: airflow.providers.amazon.aws.secrets.secrets_manager.SecretsManagerBackend
-    backend_kwargs: '{"connections_prefix": "airflow/connections", "variables_prefix": "airflow/variables", "endpoint_url": "http://host.docker.internal:4566"}'
+    backend_kwargs: '{"connections_prefix": "airflow/connections", "variables_prefix": "airflow/variables", "endpoint_url": "http://localstack.localstack.svc.cluster.local:4566"}'
 
 webserverSecretKeySecretName: ${kubernetes_secret.airflow_webserver.metadata.0.name}
 

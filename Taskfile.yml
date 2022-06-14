@@ -4,14 +4,16 @@ vars:
   PROJECT: kind-data-platform
   TAG: '{{default "latest" .TAG}}'
   DOCKERFILE: '{{default "." .DOCKERFILE}}'
-  # NOTE: Change "_HOST_PLATFORM" to the platform architecture you are running docker on.
-  _HOST_PLATFORM: arm64
 
 tasks:
   docker:build:
     cmds:
-      - DOCKER_SCAN_SUGGEST=false docker build --tag {{.PROJECT}}-{{.SERVICE}}:{{.TAG}} {{.DOCKERFILE}} --platform {{._HOST_PLATFORM}}
+      - DOCKER_SCAN_SUGGEST=false docker build --tag {{.PROJECT}}-{{.SERVICE}}:{{.TAG}} {{.DOCKERFILE}}
 
-  kind:load:
+  docker:tag:
     cmds:
-      - kind load docker-image {{.PROJECT}}-{{.SERVICE}}:{{.TAG}} --name {{.PROJECT}}
+      - docker tag {{.PROJECT}}-{{.SERVICE}}:{{.TAG}} localhost:5001/{{.PROJECT}}-{{.SERVICE}}:{{.TAG}}
+
+  docker:push:
+    cmds:
+      - docker push localhost:5001/{{.PROJECT}}-{{.SERVICE}}:{{.TAG}}

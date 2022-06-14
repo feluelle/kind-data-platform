@@ -1,6 +1,6 @@
 
 # For more information on how to configure this file, please see:
-# https://docs.getdbt.com/docs/profile
+# https://docs.getdbt.com/reference/warehouse-profiles/postgres-profile
 
 default:
   outputs:
@@ -13,4 +13,29 @@ default:
       pass: "{{ env_var('DBT_POSTGRES_PASSWORD') }}"
       dbname: "{{ env_var('DBT_POSTGRES_DB') }}"
       schema: public
+  target: dev
+
+project:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: [1 or more]
+      host: [host]
+      port: [port]
+      user: [dev_username]
+      pass: [dev_password]
+      dbname: [dbname]
+      schema: [dev_schema]
+
+    prod:
+      type: postgres
+      threads: [1 or more]
+      host: [host]
+      port: [port]
+      user: [prod_username]
+      pass: [prod_password]
+      dbname: [dbname]
+      schema: [prod_schema]
+
   target: dev

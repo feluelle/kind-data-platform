@@ -216,14 +216,26 @@
 <!-- [root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] -->
 <g id="node26" class="node">
 <title>[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;]</title>
-<polygon fill="none" stroke="#000000" points="1556.5,-36 1187.8359,-18 1556.5,0 1925.1641,-18 1556.5,-36"/>
-<text text-anchor="middle" x="1556.5" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;]</text>
+<polygon fill="none" stroke="#000000" points="1272.5,-36 903.8359,-18 1272.5,0 1641.1641,-18 1272.5,-36"/>
+<text text-anchor="middle" x="1272.5" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;]</text>
 </g>
 <!-- [root] kind_cluster.default (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] -->
-<g id="edge17" class="edge">
+<g id="edge18" class="edge">
 <title>[root] kind_cluster.default (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;]</title>
-<path fill="none" stroke="#000000" d="M1556.5,-71.8314C1556.5,-64.131 1556.5,-54.9743 1556.5,-46.4166"/>
-<polygon fill="#000000" stroke="#000000" points="1560.0001,-46.4132 1556.5,-36.4133 1553.0001,-46.4133 1560.0001,-46.4132"/>
+<path fill="none" stroke="#000000" d="M1485.2014,-71.9243C1441.4525,-60.833 1385.6828,-46.6942 1342.2264,-35.6771"/>
+<polygon fill="#000000" stroke="#000000" points="1342.8604,-32.2272 1332.3069,-33.1623 1341.1401,-39.0125 1342.8604,-32.2272"/>
+</g>
+<!-- [root] local.docker_registry (expand) -->
+<g id="node28" class="node">
+<title>[root] local.docker_registry (expand)</title>
+<ellipse fill="none" stroke="#000000" cx="1841.5" cy="-18" rx="181.9677" ry="18"/>
+<text text-anchor="middle" x="1841.5" y="-14.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] local.docker_registry (expand)</text>
+</g>
+<!-- [root] kind_cluster.default (expand)&#45;&gt;[root] local.docker_registry (expand) -->
+<g id="edge17" class="edge">
+<title>[root] kind_cluster.default (expand)&#45;&gt;[root] local.docker_registry (expand)</title>
+<path fill="none" stroke="#000000" d="M1628.0497,-71.9243C1669.811,-61.3741 1722.4873,-48.0664 1765.0609,-37.3109"/>
+<polygon fill="#000000" stroke="#000000" points="1765.9777,-40.6894 1774.8158,-34.8465 1764.2631,-33.9026 1765.9777,-40.6894"/>
 </g>
 <!-- [root] kubernetes_cluster_role.dbt (expand) -->
 <g id="node11" class="node">
@@ -238,7 +250,7 @@
 <text text-anchor="middle" x="1556.5" y="-158.3" font-family="Times,serif" font-size="14.00" fill="#000000">provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</text>
 </g>
 <!-- [root] kubernetes_cluster_role.dbt (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge18" class="edge">
+<g id="edge19" class="edge">
 <title>[root] kubernetes_cluster_role.dbt (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M2861.9666,-217.6817C2856.4041,-217.0633 2850.8909,-216.4967 2845.5,-216 2509.1373,-185.0068 2121.7402,-171.7897 1860.1706,-166.1607"/>
 <polygon fill="#000000" stroke="#000000" points="1860.2154,-162.661 1850.1432,-165.9473 1860.0664,-169.6594 1860.2154,-162.661"/>
@@ -250,7 +262,7 @@
 <text text-anchor="middle" x="3012.5" y="-374.3" font-family="Times,serif" font-size="14.00" fill="#000000">kubernetes_cluster_role_binding.dbt</text>
 </g>
 <!-- [root] kubernetes_cluster_role_binding.dbt (expand)&#45;&gt;[root] kubernetes_cluster_role.dbt (expand) -->
-<g id="edge19" class="edge">
+<g id="edge20" class="edge">
 <title>[root] kubernetes_cluster_role_binding.dbt (expand)&#45;&gt;[root] kubernetes_cluster_role.dbt (expand)</title>
 <path fill="none" stroke="#000000" d="M3007.3073,-359.7623C3000.2834,-335.0928 2987.6892,-290.8598 2979.4646,-261.9731"/>
 <polygon fill="#000000" stroke="#000000" points="2982.7552,-260.7489 2976.6505,-252.0896 2976.0228,-262.6658 2982.7552,-260.7489"/>
@@ -262,7 +274,7 @@
 <text text-anchor="middle" x="2155.5" y="-302.3" font-family="Times,serif" font-size="14.00" fill="#000000">kubernetes_namespace.airflow</text>
 </g>
 <!-- [root] kubernetes_cluster_role_binding.dbt (expand)&#45;&gt;[root] kubernetes_namespace.airflow (expand) -->
-<g id="edge20" class="edge">
+<g id="edge21" class="edge">
 <title>[root] kubernetes_cluster_role_binding.dbt (expand)&#45;&gt;[root] kubernetes_namespace.airflow (expand)</title>
 <path fill="none" stroke="#000000" d="M2871.6007,-360.857C2868.5403,-360.5607 2865.5038,-360.2745 2862.5,-360 2608.832,-336.8161 2544.0104,-348.8478 2290.5,-324 2288.7608,-323.8295 2287.0096,-323.6539 2285.2483,-323.4736"/>
 <polygon fill="#000000" stroke="#000000" points="2285.3813,-319.9681 2275.0675,-322.3921 2284.6418,-326.9289 2285.3813,-319.9681"/>
@@ -274,55 +286,55 @@
 <text text-anchor="middle" x="1813.5" y="-374.3" font-family="Times,serif" font-size="14.00" fill="#000000">kubernetes_config_map.prometheus_dashboard</text>
 </g>
 <!-- [root] kubernetes_config_map.prometheus_dashboard (expand)&#45;&gt;[root] kubernetes_namespace.grafana (expand) -->
-<g id="edge21" class="edge">
+<g id="edge22" class="edge">
 <title>[root] kubernetes_config_map.prometheus_dashboard (expand)&#45;&gt;[root] kubernetes_namespace.grafana (expand)</title>
 <path fill="none" stroke="#000000" d="M1722.6194,-359.9243C1670.6665,-349.5911 1605.4144,-336.6128 1551.9449,-325.978"/>
 <polygon fill="#000000" stroke="#000000" points="1552.5947,-322.5387 1542.104,-324.0207 1551.2291,-329.4043 1552.5947,-322.5387"/>
 </g>
 <!-- [root] kubernetes_namespace.airbyte (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge22" class="edge">
+<g id="edge23" class="edge">
 <title>[root] kubernetes_namespace.airbyte (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M924.7701,-359.9405C1018.8283,-329.8027 1213.9851,-267.4826 1379.5,-216 1417.892,-204.0584 1461.047,-190.8873 1495.1332,-180.5427"/>
 <polygon fill="#000000" stroke="#000000" points="1496.3953,-183.8175 1504.949,-177.5658 1494.3636,-177.1187 1496.3953,-183.8175"/>
 </g>
 <!-- [root] kubernetes_namespace.airflow (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge23" class="edge">
+<g id="edge24" class="edge">
 <title>[root] kubernetes_namespace.airflow (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M2116.9819,-287.9737C2071.6602,-267.4949 1993.6763,-234.5238 1923.5,-216 1849.4613,-196.4566 1765.0278,-183.4184 1695.8275,-175.0586"/>
 <polygon fill="#000000" stroke="#000000" points="1696.0744,-171.5634 1685.7312,-173.8589 1695.2483,-178.5145 1696.0744,-171.5634"/>
 </g>
 <!-- [root] kubernetes_namespace.dbt (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge24" class="edge">
+<g id="edge25" class="edge">
 <title>[root] kubernetes_namespace.dbt (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M1617.0603,-215.8314C1606.8778,-206.7803 1594.4321,-195.7174 1583.4774,-185.9799"/>
 <polygon fill="#000000" stroke="#000000" points="1585.6173,-183.1992 1575.8179,-179.1715 1580.9667,-188.4311 1585.6173,-183.1992"/>
 </g>
 <!-- [root] kubernetes_namespace.grafana (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge25" class="edge">
+<g id="edge26" class="edge">
 <title>[root] kubernetes_namespace.grafana (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M1464.7983,-287.7623C1483.2021,-262.5229 1516.5377,-216.8054 1537.5447,-187.9959"/>
 <polygon fill="#000000" stroke="#000000" points="1540.5744,-189.7814 1543.6381,-179.6392 1534.9183,-185.6572 1540.5744,-189.7814"/>
 </g>
 <!-- [root] kubernetes_namespace.localstack (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge26" class="edge">
+<g id="edge27" class="edge">
 <title>[root] kubernetes_namespace.localstack (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M1173.4195,-359.9555C1250.221,-320.2686 1433.4807,-225.5698 1515.5425,-183.1647"/>
 <polygon fill="#000000" stroke="#000000" points="1517.2903,-186.2012 1524.5675,-178.501 1514.0767,-179.9824 1517.2903,-186.2012"/>
 </g>
 <!-- [root] kubernetes_namespace.prometheus (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge27" class="edge">
+<g id="edge28" class="edge">
 <title>[root] kubernetes_namespace.prometheus (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M661.9813,-359.9936C783.7724,-328.7184 1043.9348,-263.1901 1265.5,-216 1331.6363,-201.9139 1406.6751,-188.0402 1463.9867,-177.8828"/>
 <polygon fill="#000000" stroke="#000000" points="1464.8738,-181.2804 1474.1124,-176.0942 1463.656,-174.3871 1464.8738,-181.2804"/>
 </g>
 <!-- [root] kubernetes_namespace.superset (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>[root] kubernetes_namespace.superset (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]</title>
 <path fill="none" stroke="#000000" d="M2601.4177,-360.9097C2598.4175,-360.5932 2595.4414,-360.2893 2592.5,-360 2341.6464,-335.3285 2272.4822,-379.0361 2026.5,-324 1899.1654,-295.5101 1877.2714,-257.3087 1753.5,-216 1712.4302,-202.293 1665.727,-189.378 1628.1048,-179.6171"/>
 <polygon fill="#000000" stroke="#000000" points="1628.8039,-176.183 1618.2469,-177.0777 1627.0576,-182.9617 1628.8039,-176.183"/>
 </g>
 <!-- [root] kubernetes_secret.airflow_webserver (expand)&#45;&gt;[root] kubernetes_namespace.airflow (expand) -->
-<g id="edge29" class="edge">
+<g id="edge30" class="edge">
 <title>[root] kubernetes_secret.airflow_webserver (expand)&#45;&gt;[root] kubernetes_namespace.airflow (expand)</title>
 <path fill="none" stroke="#000000" d="M2155.5,-359.8314C2155.5,-352.131 2155.5,-342.9743 2155.5,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="2159.0001,-334.4132 2155.5,-324.4133 2152.0001,-334.4133 2159.0001,-334.4132"/>
@@ -334,7 +346,7 @@
 <text text-anchor="middle" x="2484.5" y="-302.3" font-family="Times,serif" font-size="14.00" fill="#000000">random_password.airflow_webserver_secret_key</text>
 </g>
 <!-- [root] kubernetes_secret.airflow_webserver (expand)&#45;&gt;[root] random_password.airflow_webserver_secret_key (expand) -->
-<g id="edge30" class="edge">
+<g id="edge31" class="edge">
 <title>[root] kubernetes_secret.airflow_webserver (expand)&#45;&gt;[root] random_password.airflow_webserver_secret_key (expand)</title>
 <path fill="none" stroke="#000000" d="M2238.0959,-359.9243C2285.0189,-349.6554 2343.8787,-336.7743 2392.303,-326.1768"/>
 <polygon fill="#000000" stroke="#000000" points="2393.135,-329.5777 2402.1555,-324.0207 2391.6384,-322.7395 2393.135,-329.5777"/>
@@ -346,19 +358,19 @@
 <text text-anchor="middle" x="1451.5" y="-374.3" font-family="Times,serif" font-size="14.00" fill="#000000">kubernetes_secret.prometheus_datasource</text>
 </g>
 <!-- [root] kubernetes_secret.prometheus_datasource (expand)&#45;&gt;[root] kubernetes_namespace.grafana (expand) -->
-<g id="edge31" class="edge">
+<g id="edge32" class="edge">
 <title>[root] kubernetes_secret.prometheus_datasource (expand)&#45;&gt;[root] kubernetes_namespace.grafana (expand)</title>
 <path fill="none" stroke="#000000" d="M1451.5,-359.8314C1451.5,-352.131 1451.5,-342.9743 1451.5,-334.4166"/>
 <polygon fill="#000000" stroke="#000000" points="1455.0001,-334.4132 1451.5,-324.4133 1448.0001,-334.4133 1455.0001,-334.4132"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;]&#45;&gt;[root] kind_cluster.default (expand) -->
-<g id="edge39" class="edge">
+<g id="edge40" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;]&#45;&gt;[root] kind_cluster.default (expand)</title>
 <path fill="none" stroke="#000000" d="M472.2456,-221.5355C701.2119,-193.7586 1250.1793,-127.1611 1466.6005,-100.9061"/>
 <polygon fill="#000000" stroke="#000000" points="1467.1466,-104.3656 1476.6523,-99.6867 1466.3035,-97.4165 1467.1466,-104.3656"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]&#45;&gt;[root] kind_cluster.default (expand) -->
-<g id="edge49" class="edge">
+<g id="edge50" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;]&#45;&gt;[root] kind_cluster.default (expand)</title>
 <path fill="none" stroke="#000000" d="M1556.5,-143.8314C1556.5,-136.131 1556.5,-126.9743 1556.5,-118.4166"/>
 <polygon fill="#000000" stroke="#000000" points="1560.0001,-118.4132 1556.5,-108.4133 1553.0001,-118.4133 1560.0001,-118.4132"/>
@@ -370,169 +382,169 @@
 <text text-anchor="middle" x="2484.5" y="-230.3" font-family="Times,serif" font-size="14.00" fill="#000000">provider[&quot;registry.terraform.io/hashicorp/random&quot;]</text>
 </g>
 <!-- [root] random_password.airflow_webserver_secret_key (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] -->
-<g id="edge52" class="edge">
+<g id="edge53" class="edge">
 <title>[root] random_password.airflow_webserver_secret_key (expand)&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;]</title>
 <path fill="none" stroke="#000000" d="M2484.5,-287.8314C2484.5,-280.131 2484.5,-270.9743 2484.5,-262.4166"/>
 <polygon fill="#000000" stroke="#000000" points="2488.0001,-262.4132 2484.5,-252.4133 2481.0001,-262.4133 2488.0001,-262.4132"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close) -->
-<g id="node28" class="node">
+<g id="node29" class="node">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)</title>
 <ellipse fill="none" stroke="#000000" cx="826.5" cy="-522" rx="298.1472" ry="18"/>
 <text text-anchor="middle" x="826.5" y="-518.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)</text>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.airbyte (expand) -->
-<g id="edge32" class="edge">
+<g id="edge33" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.airbyte (expand)</title>
 <path fill="none" stroke="#000000" d="M802.0233,-504.0171C789.7456,-494.9968 774.7004,-483.9432 761.4254,-474.1901"/>
 <polygon fill="#000000" stroke="#000000" points="763.1355,-471.1034 753.0044,-468.0032 758.9909,-476.7446 763.1355,-471.1034"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.airflow (expand) -->
-<g id="edge33" class="edge">
+<g id="edge34" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.airflow (expand)</title>
 <path fill="none" stroke="#000000" d="M897.8012,-504.4789C939.6126,-494.2044 992.636,-481.1748 1036.3433,-470.4344"/>
 <polygon fill="#000000" stroke="#000000" points="1037.2155,-473.8243 1046.0913,-468.039 1035.545,-467.0265 1037.2155,-473.8243"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.grafana (expand) -->
-<g id="edge34" class="edge">
+<g id="edge35" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.grafana (expand)</title>
 <path fill="none" stroke="#000000" d="M640.5366,-507.9243C569.6109,-499.8525 488.5313,-487.3204 416.5,-468 354.6605,-451.4133 287.0646,-421.3266 244.0253,-400.5335"/>
 <polygon fill="#000000" stroke="#000000" points="245.4825,-397.3502 234.9598,-396.1155 242.4158,-403.6427 245.4825,-397.3502"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.localstack (expand) -->
-<g id="edge35" class="edge">
+<g id="edge36" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.localstack (expand)</title>
 <path fill="none" stroke="#000000" d="M850.9767,-504.0171C863.2544,-494.9968 878.2996,-483.9432 891.5746,-474.1901"/>
 <polygon fill="#000000" stroke="#000000" points="894.0091,-476.7446 899.9956,-468.0032 889.8645,-471.1034 894.0091,-476.7446"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.metrics&#45;server (expand) -->
-<g id="edge36" class="edge">
+<g id="edge37" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.metrics&#45;server (expand)</title>
 <path fill="none" stroke="#000000" d="M607.5005,-509.734C516.4386,-501.83 410.1144,-488.9383 315.5,-468 219.1641,-446.6808 162.8488,-476.2884 105.5,-396 92.7782,-378.1895 95.4498,-352.9763 100.4919,-333.7654"/>
 <polygon fill="#000000" stroke="#000000" points="103.8804,-334.6491 103.3646,-324.0668 97.1686,-332.6611 103.8804,-334.6491"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.prometheus (expand) -->
-<g id="edge37" class="edge">
+<g id="edge38" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.prometheus (expand)</title>
 <path fill="none" stroke="#000000" d="M753.4954,-504.4789C710.685,-494.2044 656.3949,-481.1748 611.6434,-470.4344"/>
 <polygon fill="#000000" stroke="#000000" points="612.2032,-466.9694 601.6624,-468.039 610.5695,-473.7761 612.2032,-466.9694"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.superset (expand) -->
-<g id="edge38" class="edge">
+<g id="edge39" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)&#45;&gt;[root] helm_release.superset (expand)</title>
 <path fill="none" stroke="#000000" d="M1106.2386,-515.7226C1393.729,-508.2564 1854.1872,-493.4794 2251.5,-468 2283.9873,-465.9166 2319.3978,-462.9418 2351.2227,-460.0092"/>
 <polygon fill="#000000" stroke="#000000" points="2351.7888,-463.4717 2361.4213,-459.0597 2351.1398,-456.5019 2351.7888,-463.4717"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close) -->
-<g id="node29" class="node">
+<g id="node30" class="node">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)</title>
 <ellipse fill="none" stroke="#000000" cx="1914.5" cy="-450" rx="328.4419" ry="18"/>
 <text text-anchor="middle" x="1914.5" y="-446.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)</text>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] data.kubernetes_secret.postgresql (expand) -->
-<g id="edge40" class="edge">
+<g id="edge41" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] data.kubernetes_secret.postgresql (expand)</title>
 <path fill="none" stroke="#000000" d="M2038.8164,-433.3008C2119.0542,-422.5226 2223.6881,-408.4673 2307.3886,-397.2239"/>
 <polygon fill="#000000" stroke="#000000" points="2308.0442,-400.6674 2317.4892,-395.8671 2307.1122,-393.7297 2308.0442,-400.6674"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_cluster_role_binding.dbt (expand) -->
-<g id="edge41" class="edge">
+<g id="edge42" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_cluster_role_binding.dbt (expand)</title>
 <path fill="none" stroke="#000000" d="M2179.4138,-439.3497C2367.008,-430.7405 2624.7763,-416.7602 2861.4192,-396.0635"/>
 <polygon fill="#000000" stroke="#000000" points="2861.9482,-399.5306 2871.6029,-395.1675 2861.3346,-392.5575 2861.9482,-399.5306"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_config_map.prometheus_dashboard (expand) -->
-<g id="edge42" class="edge">
+<g id="edge43" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_config_map.prometheus_dashboard (expand)</title>
 <path fill="none" stroke="#000000" d="M1889.274,-432.0171C1876.5,-422.9109 1860.8191,-411.7324 1847.043,-401.9118"/>
 <polygon fill="#000000" stroke="#000000" points="1848.929,-398.958 1838.7545,-396.0032 1844.8656,-404.658 1848.929,-398.958"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.airbyte (expand) -->
-<g id="edge43" class="edge">
+<g id="edge44" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.airbyte (expand)</title>
 <path fill="none" stroke="#000000" d="M1644.2155,-439.7577C1464.1195,-431.5618 1221.9807,-417.9172 999.5581,-396.1648"/>
 <polygon fill="#000000" stroke="#000000" points="999.6119,-392.6533 989.3169,-395.1561 998.9257,-399.6196 999.6119,-392.6533"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.localstack (expand) -->
-<g id="edge44" class="edge">
+<g id="edge45" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.localstack (expand)</title>
 <path fill="none" stroke="#000000" d="M1718.3856,-435.5475C1595.2542,-425.9419 1432.8883,-412.3093 1280.0615,-396.1446"/>
 <polygon fill="#000000" stroke="#000000" points="1280.3234,-392.6528 1270.0094,-395.0762 1279.5835,-399.6135 1280.3234,-392.6528"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.prometheus (expand) -->
-<g id="edge45" class="edge">
+<g id="edge46" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.prometheus (expand)</title>
 <path fill="none" stroke="#000000" d="M1615.0184,-442.5897C1379.7818,-435.2573 1043.7395,-421.4543 740.3476,-396.121"/>
 <polygon fill="#000000" stroke="#000000" points="740.2807,-392.6032 730.0227,-395.2534 739.6944,-399.5786 740.2807,-392.6032"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.superset (expand) -->
-<g id="edge46" class="edge">
+<g id="edge47" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_namespace.superset (expand)</title>
 <path fill="none" stroke="#000000" d="M2124.739,-436.144C2256.0195,-426.7925 2428.7876,-413.2197 2591.2225,-396.1062"/>
 <polygon fill="#000000" stroke="#000000" points="2591.8357,-399.5609 2601.4112,-395.0266 2591.0981,-392.5998 2591.8357,-399.5609"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_secret.airflow_webserver (expand) -->
-<g id="edge47" class="edge">
+<g id="edge48" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_secret.airflow_webserver (expand)</title>
 <path fill="none" stroke="#000000" d="M1973.7639,-432.2946C2007.5232,-422.2088 2050.0161,-409.5138 2085.4229,-398.9359"/>
 <polygon fill="#000000" stroke="#000000" points="2086.6287,-402.2286 2095.2084,-396.0124 2084.6249,-395.5215 2086.6287,-402.2286"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_secret.prometheus_datasource (expand) -->
-<g id="edge48" class="edge">
+<g id="edge49" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)&#45;&gt;[root] kubernetes_secret.prometheus_datasource (expand)</title>
 <path fill="none" stroke="#000000" d="M1805.0687,-432.9826C1736.7571,-422.3596 1648.5835,-408.648 1577.3788,-397.5751"/>
 <polygon fill="#000000" stroke="#000000" points="1577.8671,-394.109 1567.448,-396.0308 1576.7914,-401.0259 1577.8671,-394.109"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close) -->
-<g id="node30" class="node">
+<g id="node31" class="node">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close)</title>
 <ellipse fill="none" stroke="#000000" cx="2613.5" cy="-522" rx="311.1449" ry="18"/>
 <text text-anchor="middle" x="2613.5" y="-518.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close)</text>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close)&#45;&gt;[root] random_password.airflow_webserver_secret_key (expand) -->
-<g id="edge50" class="edge">
+<g id="edge51" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close)&#45;&gt;[root] random_password.airflow_webserver_secret_key (expand)</title>
 <path fill="none" stroke="#000000" d="M2777.6126,-506.6542C2921.5091,-489.4011 3114.9782,-455.664 3162.5,-396 3172.4683,-383.4847 3173.3553,-371.7543 3162.5,-360 3146.1115,-342.2543 2873.5961,-325.129 2679.1226,-315.0831"/>
 <polygon fill="#000000" stroke="#000000" points="2679.2177,-311.5835 2669.0512,-314.5656 2678.8584,-318.5743 2679.2177,-311.5835"/>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close) -->
-<g id="node31" class="node">
+<g id="node32" class="node">
 <title>[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close)</title>
 <ellipse fill="none" stroke="#000000" cx="2798.5" cy="-162" rx="323.0427" ry="18"/>
 <text text-anchor="middle" x="2798.5" y="-158.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close)</text>
 </g>
 <!-- [root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close)&#45;&gt;[root] kind_cluster.default (expand) -->
-<g id="edge51" class="edge">
+<g id="edge52" class="edge">
 <title>[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close)&#45;&gt;[root] kind_cluster.default (expand)</title>
 <path fill="none" stroke="#000000" d="M2574.3024,-149.003C2297.324,-132.9463 1839.1292,-106.3843 1646.3564,-95.2091"/>
 <polygon fill="#000000" stroke="#000000" points="1646.4521,-91.7088 1636.2662,-94.6241 1646.0469,-98.6971 1646.4521,-91.7088"/>
 </g>
 <!-- [root] root -->
-<g id="node32" class="node">
+<g id="node33" class="node">
 <title>[root] root</title>
 <ellipse fill="none" stroke="#000000" cx="2530.5" cy="-594" rx="58.4896" ry="18"/>
 <text text-anchor="middle" x="2530.5" y="-590.3" font-family="Times,serif" font-size="14.00" fill="#000000">[root] root</text>
 </g>
 <!-- [root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close) -->
-<g id="edge53" class="edge">
+<g id="edge54" class="edge">
 <title>[root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/helm&quot;] (close)</title>
 <path fill="none" stroke="#000000" d="M2472.3374,-591.5424C2255.6358,-582.386 1486.8548,-549.9023 1081.2869,-532.7656"/>
 <polygon fill="#000000" stroke="#000000" points="1081.3185,-529.264 1071.1797,-532.3386 1081.023,-536.2577 1081.3185,-529.264"/>
 </g>
 <!-- [root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close) -->
-<g id="edge54" class="edge">
+<g id="edge55" class="edge">
 <title>[root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/kubernetes&quot;] (close)</title>
 <path fill="none" stroke="#000000" d="M2483.256,-583.3688C2435.4013,-572.5689 2359.2642,-555.3002 2293.5,-540 2191.6922,-516.3142 2074.6659,-488.4226 1997.9082,-470.0376"/>
 <polygon fill="#000000" stroke="#000000" points="1998.3583,-466.5464 1987.818,-467.62 1996.7272,-473.3538 1998.3583,-466.5464"/>
 </g>
 <!-- [root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close) -->
-<g id="edge55" class="edge">
+<g id="edge56" class="edge">
 <title>[root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/hashicorp/random&quot;] (close)</title>
 <path fill="none" stroke="#000000" d="M2550.1698,-576.937C2560.5304,-567.9495 2573.4287,-556.7607 2584.8761,-546.8304"/>
 <polygon fill="#000000" stroke="#000000" points="2587.26,-549.3958 2592.5204,-540.1992 2582.673,-544.1081 2587.26,-549.3958"/>
 </g>
 <!-- [root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close) -->
-<g id="edge56" class="edge">
+<g id="edge57" class="edge">
 <title>[root] root&#45;&gt;[root] provider[&quot;registry.terraform.io/kyma&#45;incubator/kind&quot;] (close)</title>
 <path fill="none" stroke="#000000" d="M2586.0093,-588.2853C2749.7719,-570.686 3219.5,-514.5764 3219.5,-450 3219.5,-450 3219.5,-450 3219.5,-306 3219.5,-236.0921 3154.9974,-242.9666 3090.5,-216 3050.4549,-199.257 3005.1672,-187.6862 2962.4164,-179.6964"/>
 <polygon fill="#000000" stroke="#000000" points="2962.9401,-176.2343 2952.476,-177.8937 2961.691,-183.122 2962.9401,-176.2343"/>

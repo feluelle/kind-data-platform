@@ -10,5 +10,6 @@ tasks:
   default:
     cmds:
       - task: base:docker:build
-      - task: base:kind:load
+      - task: base:docker:tag
+      - task: base:docker:push
       - terraform -chdir=../infra apply -replace="helm_release.airflow"

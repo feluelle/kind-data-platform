@@ -10,4 +10,5 @@ tasks:
   default:
     cmds:
       - task: base:docker:build
-      - task: base:kind:load
+      - task: base:docker:tag
+      - task: base:docker:push

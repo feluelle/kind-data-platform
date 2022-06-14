@@ -8,11 +8,15 @@ tasks:
     cmds:
       - terraform init
       - terraform apply --target kind_cluster.default -auto-approve
+      - bash kind-with-registry.sh
       - task: base:docker:build
         vars:
           SERVICE: airflow
           DOCKERFILE: ../airflow
-      - task: base:kind:load
+      - task: base:docker:tag
+        vars:
+          SERVICE: airflow
+      - task: base:docker:push
         vars:
           SERVICE: airflow
       - terraform apply -auto-approve
