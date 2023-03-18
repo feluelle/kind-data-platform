@@ -1,6 +1,6 @@
-from custom import Airbyte, Dbt, Superset
+from onprem.analytics import Airbyte, Dbt, Superset
 
-from diagrams import Diagram
+from diagrams import Diagram  # type: ignore[attr-defined]
 from diagrams.aws.security import SecretsManager
 from diagrams.aws.storage import S3
 from diagrams.onprem.database import Postgresql
