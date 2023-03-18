@@ -4,11 +4,11 @@ from tempfile import gettempdir
 from urllib.parse import urlparse
 from urllib.request import urlretrieve
 
-from diagrams.custom import Custom
+from diagrams.custom import Custom  # type: ignore[attr-defined]
 
 
 @dataclass
-class HelperCustom:
+class IconDownloader:
     """
     Help downloading the icon for the a custom node.
 
@@ -41,7 +41,7 @@ class HelperCustom:
         return splitext(path)[1]
 
 
-class CustomSlim(Custom):
+class RemoteCustom(Custom):
     """
     A slim version of the Custom node type which downloads the icon automatically.
 
@@ -51,37 +51,6 @@ class CustomSlim(Custom):
     """
 
     def __init__(self, name: str, url: str, file_extension: str = ""):
-        node = HelperCustom(name, url, file_extension)
-        node.download()
-        super().__init__(label="", icon_path=node.get_icon_path())
-
-
-class Airbyte(CustomSlim):
-    """FIXME: Use node from diagrams when available. See https://github.com/mingrammer/diagrams/issues/457 for more information."""
-
-    def __init__(self):
-        super().__init__(
-            name="airbyte",
-            url="https://assets.website-files.com/605e01bc25f7e19a82e74788/60895f8dfc189968c33b89d2_airbyte_rounded-rectangle_icon-p1myrdbsr61z7375uuocdxnlmab85b8vry3h73pfk0.png",
-        )
-
-
-class Dbt(CustomSlim):
-    """Using a proper dbt icon."""
-
-    def __init__(self):
-        super().__init__(
-            name="dbt",
-            url="https://docs.google.com/uc?export=download&id=1fnsWHRu2a_UkJBJgkZtqt99x5bSyf3Aw",
-            file_extension=".png",
-        )
-
-
-class Superset(CustomSlim):
-    """Using a proper superset icon."""
-
-    def __init__(self):
-        super().__init__(
-            name="superset",
-            url="https://www.apache.org/logos/res/superset/superset-2.png",
-        )
+        icon_downloader = IconDownloader(name, url, file_extension)
+        icon_downloader.download()
+        super().__init__(label="", icon_path=icon_downloader.get_icon_path())
