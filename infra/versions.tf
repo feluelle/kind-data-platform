@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    kind = {
-      source  = "kyma-incubator/kind"
-      version = "0.0.11"
+    k3d = {
+      source  = "sneakybugs/k3d"
+      version = "1.0.1"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -18,5 +18,5 @@ terraform {
     }
   }
 
-  required_version = "1.4.2"
+  required_version = "1.5.1"
 }

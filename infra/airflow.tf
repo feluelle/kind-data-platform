@@ -18,7 +18,7 @@ resource "helm_release" "airflow" {
     <<EOT
 images:
   airflow:
-    repository: ${local.docker_registry}:5000/kind-data-platform-airflow
+    repository: ${local.docker_registry}:5001/k3d-data-platform-airflow
     tag: latest
     pullPolicy: Always
 

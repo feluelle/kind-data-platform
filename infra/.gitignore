@@ -34,5 +34,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-# kube config created by kind
-kind-data-platform-config
+# kube config created by k3d
+k3d-data-platform-config

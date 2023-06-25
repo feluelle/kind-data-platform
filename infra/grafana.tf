@@ -10,7 +10,7 @@ resource "helm_release" "grafana" {
   name       = "grafana"
   repository = "https://grafana.github.io/helm-charts"
   chart      = "grafana"
-  version    = "6.29.11"
+  version    = "6.57.3"
 
   set {
     name  = "sidecar.dashboards.enabled"

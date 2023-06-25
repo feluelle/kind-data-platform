@@ -16,7 +16,7 @@ def dbt():
         cmds=["run"],
         name="dbt_run",
         namespace="dbt",
-        image="kind-data-platform-dbt:latest",
+        image="k3d-data-platform-dbt:latest",
         image_pull_policy="Never",
         env_vars=[
             k8s.V1EnvVar(name="DBT_POSTGRES_HOST", value="postgresql"),

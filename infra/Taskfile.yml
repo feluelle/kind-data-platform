@@ -7,8 +7,7 @@ tasks:
   setup:
     cmds:
       - terraform init
-      - terraform apply --target kind_cluster.default -auto-approve
-      - bash kind-with-registry.sh
+      - terraform apply --target k3d_cluster.default -auto-approve
       - task: base:docker:build
         vars:
           SERVICE: airflow
@@ -36,7 +35,7 @@ tasks:
 
   teardown:
     cmds:
-      - kind delete cluster --name {{.PROJECT}}
+      - k3d cluster delete {{.PROJECT}}
       - rm -f {{.PROJECT}}-config terraform.tfstate terraform.tfstate.backup
 
   visualize:

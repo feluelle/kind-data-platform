@@ -1,7 +1,7 @@
 version: "3"
 
 vars:
-  PROJECT: kind-data-platform
+  PROJECT: k3d-data-platform
   TAG: '{{default "latest" .TAG}}'
   DOCKERFILE: '{{default "." .DOCKERFILE}}'
 

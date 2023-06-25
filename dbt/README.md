@@ -15,5 +15,5 @@ _You can optionally tag the image with a version via `TAG=<version>`._
 The project has been initialized already through running the following command:
 
 ```bash
-docker run --rm -it -v $PWD/dbt:/opt/dbt kind-data-platform-dbt init
+docker run --rm -it -v $PWD/dbt:/opt/dbt k3d-data-platform-dbt init
 ```

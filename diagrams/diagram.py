@@ -8,7 +8,7 @@ from diagrams.onprem.monitoring import Grafana, Prometheus
 from diagrams.onprem.workflow import Airflow
 
 with Diagram(
-    filename="kind-data-platform",
+    filename="k3d-data-platform",
     show=False,
     graph_attr={
         "bgcolor": "#272935",  # snazzy theme
