@@ -1,4 +1,4 @@
-FROM ghcr.io/dbt-labs/dbt-postgres:1.6.6
+FROM ghcr.io/dbt-labs/dbt-postgres:1.7.0
 
 ENV DBT_PROFILES_DIR=/opt/dbt
 
