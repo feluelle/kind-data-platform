@@ -12,7 +12,7 @@ repos:
     hooks:
       - id: check-hooks-apply
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: check-ast
       - id: check-builtin-literals
@@ -65,7 +65,7 @@ repos:
       - id: flake8
         args: ["--max-line-length", "88", "--extend-ignore", "E203,E501"]
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.7.9
+    rev: 1.7.10
     hooks:
       - id: bandit
   - repo: https://github.com/PyCQA/pydocstyle
@@ -84,7 +84,7 @@ repos:
       - id: terraform-fmt
       - id: terraform-validate
   - repo: https://github.com/hadolint/hadolint
-    rev: v2.13.0-beta
+    rev: v2.13.1-beta
     hooks:
       - id: hadolint-docker
   - repo: local
