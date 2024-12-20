@@ -2,22 +2,22 @@
 # Manual edits may be lost in future updates.
 
 provider "registry.terraform.io/hashicorp/helm" {
-  version     = "2.16.0"
-  constraints = "~> 2.16.0"
+  version     = "2.17.0"
+  constraints = "~> 2.17.0"
   hashes = [
-    "h1:DdCtGLzdYptklsULtsF94PCWJMNYy1fclyzgIhxZ4aY=",
-    "h1:zk+1yjCh9RKDsugek6X2JXtLywtdIeS1DeOLjzypU70=",
-    "zh:0fa970817bab7a8411ff443d51004dc2974c0ef4aad082a514f8b56559db3113",
-    "zh:333b9ac02fcbf9dcf4825dc1e4fc373ef4571b1dd00b79f5c8ea24e1c79992f0",
-    "zh:792e1e9c409dd76e3eabf3b0c0a6b5a3c3ef42adfc578f7899def46a81e994ef",
-    "zh:8eca4a52d43ca97d944a8c5d0f2ee60bcbefcb3ccee51d5620bde9047b8ea9c7",
-    "zh:90969e6a0f7127b0cb75c8790f63f4d050576ffe9bd722887a11d885430624cd",
-    "zh:a9d72fb106f16ab4f68c779a2c59124929cbc1cb0dbc47ed5ef380c6205f70bb",
-    "zh:c28bc1a2c0f8f11626baf905a888b2600663ba8dbb33ce4203efcafa16c77fc5",
-    "zh:c5d6c72a8c5513ff868209ceda9e6000723b02d21811d05909d26614784d4db6",
-    "zh:d105d40b1a217120332f65a93b24470d18e355868bfa99f0cdeeff5869cff9fb",
-    "zh:e6c78637c8c6081b8817f61658de8d0163b92157336ac3236cf183b5834f9487",
-    "zh:edef68729e4f263df3a6737fc73b14e1ee952b800d72d0c6f2cb524bc1ad7ec8",
+    "h1:K5FEjxvDnxb1JF1kG1xr8J3pNGxoaR3Z0IBG9Csm/Is=",
+    "h1:kQMkcPVvHOguOqnxoEU2sm1ND9vCHiT8TvZ2x6v/Rsw=",
+    "zh:06fb4e9932f0afc1904d2279e6e99353c2ddac0d765305ce90519af410706bd4",
+    "zh:104eccfc781fc868da3c7fec4385ad14ed183eb985c96331a1a937ac79c2d1a7",
+    "zh:129345c82359837bb3f0070ce4891ec232697052f7d5ccf61d43d818912cf5f3",
+    "zh:3956187ec239f4045975b35e8c30741f701aa494c386aaa04ebabffe7749f81c",
+    "zh:66a9686d92a6b3ec43de3ca3fde60ef3d89fb76259ed3313ca4eb9bb8c13b7dd",
+    "zh:88644260090aa621e7e8083585c468c8dd5e09a3c01a432fb05da5c4623af940",
+    "zh:a248f650d174a883b32c5b94f9e725f4057e623b00f171936dcdcc840fad0b3e",
+    "zh:aa498c1f1ab93be5c8fbf6d48af51dc6ef0f10b2ea88d67bcb9f02d1d80d3930",
+    "zh:bf01e0f2ec2468c53596e027d376532a2d30feb72b0b5b810334d043109ae32f",
+    "zh:c46fa84cc8388e5ca87eb575a534ebcf68819c5a5724142998b487cb11246654",
+    "zh:d0c0f15ffc115c0965cbfe5c81f18c2e114113e7a1e6829f6bfd879ce5744fbb",
     "zh:f569b65999264a9416862bca5cd2a6177d94ccb0424f3a4ef424428912b9cb3c",
   ]
 }
